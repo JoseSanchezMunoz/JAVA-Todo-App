@@ -1,0 +1,2 @@
+1|Despertarse
+0|Comer
