@@ -64,9 +64,10 @@ public class ConsoleView {
             }
             case 2 -> displayTasks(); // Mostrar lista de tareas
             case 3 -> {
+                displayTasks(); // Mostramos las opciones para editar
                 // Editar una tarea existente
                 System.out.print("Ingrese el número de la tarea a editar: ");
-                int editIndex = readInt("");
+                int editIndex = readInt("") - 1;
 
                 System.out.print("Ingrese el nuevo texto de la tarea: ");
                 String newText = scanner.nextLine();
@@ -74,11 +75,13 @@ public class ConsoleView {
                 controller.updateTask(editIndex, newText); // Actualizar descripción
             }
             case 4 -> {
+                displayTasks(); // Mostramos las opciones para marcar
                 // Marcar tarea como completada
                 int index = readInt("Número de tarea a marcar como completada: ") - 1;
                 controller.markTaskCompleted(index);
             }
             case 5 -> {
+                displayTasks(); // Mostramos las opciones para eliminar
                 // Eliminar tarea
                 int index = readInt("Número de tarea a eliminar: ") - 1;
                 controller.removeTask(index);
@@ -101,7 +104,7 @@ public class ConsoleView {
         } else {
             System.out.println("\n--- LISTA DE TAREAS ---");
             for (int i = 0; i < tasks.size(); i++) {
-                System.out.println((i) + ". " + tasks.get(i));
+                System.out.println((i + 1) + ". " + tasks.get(i));
             }
         }
     }
