@@ -46,7 +46,7 @@ Al iniciar el programa verás el siguiente menú:
 
 
 
-'''bash
+```bash
 
 --- MENÚ DE TAREAS ---
 
@@ -62,7 +62,7 @@ Al iniciar el programa verás el siguiente menú:
 
 0\. Salir
 
-'''
+```
 
 
 
@@ -82,13 +82,13 @@ Las tareas se guardan en un archivo `.txt` con el siguiente formato por línea:
 
 
 
-'''bash
+```bash
 
 1|Estudiar para el examen
 
 0|Lavar los platos
 
-'''
+```
 
 
 
